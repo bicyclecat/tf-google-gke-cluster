@@ -39,6 +39,12 @@ variable "gke_cluster_name" {
   description = "GKE cluster name"
 }
 
+variable "deletion_protection" {
+  type        = bool
+  default     = true
+  description = "Deletion protection. False value allows Terraform to destroy the cluster"
+}
+
 variable "pool_name" {
   type        = string
   default     = "main"
