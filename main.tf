@@ -13,9 +13,9 @@ provider "kubernetes" {
 }
 
 resource "google_container_cluster" "this" {
-  name     = var.gke_cluster_name
-  location = var.google_region
-  deletion_protection = var.deletion_protection
+  name                     = var.gke_cluster_name
+  location                 = var.google_region
+  deletion_protection      = var.deletion_protection
   initial_node_count       = 1
   remove_default_node_pool = true
 
