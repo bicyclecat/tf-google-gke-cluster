@@ -8,6 +8,7 @@ output "cluster_data" {
     kubeconfig_id = local_file.kubeconfig.id
     node_pool_id  = google_container_node_pool.this.id
     cluster_id    = google_container_cluster.this.id
+    cluster_name  = var.gke_cluster_name
   }
   description = "The path to the kubeconfig file"
 }
